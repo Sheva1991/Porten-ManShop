@@ -20,21 +20,3 @@ const CustomSlider: React.FC<PropsType> = ({ slidesToShow = 1, slidesToScroll = 
 }
 
 export default CustomSlider
-
-// export default class CustomSlider<PropsType> extends React.Component {
-
-//     render() {
-//         var settings = {
-//             dots: true,
-//             infinite: true,
-//             speed: 500,
-//             slidesToShow: 1,
-//             slidesToScroll: 1
-//         };
-//         return (
-//             <Slider {...settings} >
-//                 {this.props.children}
-//             </Slider>
-//         );
-//     }
-// }

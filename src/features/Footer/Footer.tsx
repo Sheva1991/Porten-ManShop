@@ -2,7 +2,8 @@ import React from 'react'
 import styles from './Footer.module.scss'
 import { Col, Container, Row } from 'react-bootstrap';
 import Title from 'components/Title';
-import SubscribeForm from 'components/Forms/SubscribeForm/SubscribeForm';
+import SubscribeForm from 'components/Forms/SubscribeForm';
+import CustomList from 'components/CustomList/CustomList';
 
 const Footer: React.FC = () => {
 
@@ -18,13 +19,7 @@ const Footer: React.FC = () => {
                     </Col>
                     <Col className={styles.col} lg={4} md={12}>
                         <Title title='Категории' tag='h3' />
-                        <ul className={styles.list}>
-                            <li>часы</li>
-                            <li>браслеты</li>
-                            <li>ремни</li>
-                            <li>ювелирные изделия</li>
-                            <li>запонки</li>
-                        </ul>
+                        <CustomList className={styles.list} items={['часы', 'браслеты', 'ремни', 'ювелирные изделия', 'запонки',]} />
                     </Col>
                     <Col className={styles.col} lg={4} md={12}>
                         <Title title='РАссылка' tag='h3' />
