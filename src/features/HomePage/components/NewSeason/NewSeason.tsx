@@ -3,10 +3,9 @@ import Title from 'components/Title'
 import React, { useState, useEffect } from 'react'
 import { Col, Row } from 'react-bootstrap'
 import styles from './NewSeason.module.scss'
-import CustomSlider from '../../../../components/CustomSlider/CustomSlider';
+import CustomSlider from 'components/CustomSlider/CustomSlider';
+import img from 'assets/img/clock.png'
 
-
-const img = require('assets/img/clock.png')
 const items = [
     { img: img, title: 'Louis XVI ATHOS', text: '165 000 руб.' },
     { img: img, title: 'Louis XVI ATHOS', text: '165 000 руб.' },

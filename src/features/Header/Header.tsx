@@ -36,7 +36,10 @@ const Header: React.FC = () => {
                     <CustomLink link='/cart' action={toggleNav}>
                         <CartIcon className={styles.cart} />
                     </CustomLink>
-                    <SearchIcon className={styles.search} onClick={toggleNav} />
+                    <CustomLink link='/cart' action={toggleNav}>
+                        <SearchIcon className={styles.search} />
+                    </CustomLink>
+
                 </Menu>
             </Container>
         </header>
