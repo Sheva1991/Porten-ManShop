@@ -1,0 +1,56 @@
+@import 'assets/styles/variables.scss';
+@import 'assets/styles/mixins.scss';
+
+.root {
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    font-family: $text-playfair;
+    font-weight: 700;
+    text-align: center;
+}
+
+.h1 {
+    font-size: 6.4rem;
+    line-height: 1.5;
+    font-family: $text-postNB;
+    margin-bottom: 0;
+    position: relative;
+
+    &::after {
+        content: '';
+        height: 1px;
+        width: 100%;
+        background-color: $color-main;
+        position: absolute;
+        left: 50%;
+        bottom: 4px;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.h2 {
+    font-size: 3.6rem;
+    position: relative;
+    padding-bottom: 30px;
+
+
+    &::after {
+        content: '';
+        height: 1px;
+        width: 120px;
+        background-color: $color-main;
+        position: absolute;
+        left: 50%;
+        bottom: 0px;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.h3 {
+    font-size: 2.4rem;
+    font-weight: 400;
+}
+
+.h4 {
+    font-size: 1.8rem;
+}

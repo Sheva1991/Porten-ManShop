@@ -1,0 +1,32 @@
+.root {
+    background: #0F0F0F;
+    padding: 60px 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.brands {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.brand {
+    position: relative;
+    width: 255px;
+    display: flex;
+    justify-content: center;
+
+    img {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .brands {
+        margin-top: 0;
+    }
+}

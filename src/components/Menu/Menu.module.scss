@@ -1,0 +1,40 @@
+@import 'assets/styles/variables.scss';
+@import 'assets/styles/mixins.scss';
+
+.item {
+    display: inline-flex;
+    text-transform: uppercase;
+    padding: 31px 20px;
+
+    @include hfa {
+        background-color: #1F1F1F;
+        color: $color-main;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .root {
+        display: none;
+    }
+
+    .adaptiveMenu {
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+        z-index: 5;
+
+        .item {
+            color: $color-main;
+
+            @include hfa {
+                background-color: #1F1F1F;
+                color: $color-gray;
+            }
+        }
+    }
+}

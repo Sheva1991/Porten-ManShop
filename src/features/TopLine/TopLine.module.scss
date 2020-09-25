@@ -1,0 +1,140 @@
+@import 'assets/styles/variables.scss';
+@import 'assets/styles/mixins.scss';
+
+.root {
+    display: flex;
+    justify-content: space-between;
+    color: $color-gray;
+    padding: 15px 0;
+    font-size: 1.2rem;
+}
+
+.contacts {
+    display: inline-flex;
+    align-items: center;
+
+    a {
+        padding-right: 20px;
+        text-decoration: none;
+        color: $color-gray;
+        position: relative;
+
+        path {
+            transition: 0.3s ease-in-out;
+        }
+
+        @include hfa {
+            color: $color-main;
+            text-decoration: none;
+            outline: none;
+
+            path {
+                fill: $color-main;
+            }
+
+
+        }
+
+        &::after {
+            content: '';
+            height: 90%;
+            width: 2px;
+            background-color: $color-gray;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+    }
+
+    span {
+        padding: 0 20px;
+        position: relative;
+
+        &::after {
+            content: '';
+            height: 90%;
+            width: 2px;
+            background-color: $color-gray;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+
+        &:last-child {
+            padding-right: 0;
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+}
+
+.login {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+
+    svg {
+        margin-right: 10px;
+
+        path {
+            transition: 0.3s ease-in-out;
+        }
+    }
+
+    @include hfa {
+        color: $color-main;
+
+        path {
+            fill: $color-main;
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .root {
+        flex-direction: column;
+    }
+
+    .contacts {
+        margin-bottom: 20px;
+    }
+
+    .login {
+        align-self: flex-end;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .login {
+        align-self: center;
+    }
+
+    .contacts {
+        flex-wrap: wrap;
+        justify-content: center;
+
+        a {
+            margin-bottom: 10px;
+
+            &::after {
+                display: none;
+            }
+        }
+
+        span {
+            margin-bottom: 10px;
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+}

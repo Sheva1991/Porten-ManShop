@@ -1,0 +1,33 @@
+@import "~bootstrap/scss/bootstrap";
+
+@font-face {
+  font-family: 'PostNoBillsJaffnaBold';
+  src: url('./assets/fonts/PostNoBillsJaffnaBold.eot');
+  src: url('./assets/fonts/PostNoBillsJaffnaBold.eot') format('embedded-opentype'),
+    url('./assets/fonts/PostNoBillsJaffnaBold.woff2') format('woff2'),
+    url('./assets/fonts/PostNoBillsJaffnaBold.woff') format('woff'),
+    url('./assets/fonts/PostNoBillsJaffnaBold.ttf') format('truetype'),
+    url('./assets/fonts/PostNoBillsJaffnaBold.svg#PostNoBillsJaffnaBold') format('svg');
+}
+
+@import 'assets/styles/variables.scss';
+
+
+
+html {
+  height: 100%;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+body {
+  min-height: 100%;
+  background-color: #000;
+  color: #fff;
+  font-size: 1.4rem;
+  font-family: $text-pt-sans;
+}
+
+.slick-slider {
+  width: 100%;
+}

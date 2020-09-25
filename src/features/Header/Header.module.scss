@@ -1,0 +1,70 @@
+@import 'assets/styles/variables.scss';
+@import 'assets/styles/mixins.scss';
+
+.root {
+    background-color: #0F0F0F;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo {
+    font-family: $text-postNB;
+    font-weight: 700;
+    font-size: 3.6rem;
+    line-height: 1.5;
+    color: #fff;
+}
+
+.cart {
+    margin: 0 45px 0 42px;
+}
+
+.cart,
+.search {
+    cursor: pointer;
+
+    @include hfa {
+        path {
+            fill: $color-gray;
+        }
+    }
+}
+
+.toggler {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    font-size: 30px;
+    color: $color-main;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    display: none;
+
+    &:active,
+    &:focus {
+        border: none;
+        outline: none;
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .toggler {
+        display: block;
+        position: absolute;
+        z-index: 10;
+        right: 20px;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+
+    .cart {
+        margin-bottom: 20px;
+    }
+}

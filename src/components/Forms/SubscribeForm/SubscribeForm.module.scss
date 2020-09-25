@@ -1,0 +1,56 @@
+@import 'assets/styles/variables.scss';
+@import 'assets/styles/mixins.scss';
+
+.form {
+    display: inline-flex;
+    margin-top: 31px;
+}
+
+.input {
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(0, 0, 0, 0);
+    height: 100%;
+    padding: 0 10px;
+    color: $color-main;
+
+    @include hfa {
+        border: 1px solid #0f0f0f;
+        outline: none;
+    }
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #0f0f0f;
+    text-transform: uppercase;
+    border: 1px solid #0f0f0f;
+    color: $color-main;
+
+
+    @include hfa {
+        background-color: #000;
+    }
+}
+
+::placeholder {
+    color: $color-main;
+    opacity: 0.4;
+}
+
+@media screen and (max-width: 325px) {
+    .form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 31px;
+    }
+
+    .input {
+        margin-bottom: 20px;
+        padding: 10px 20px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}

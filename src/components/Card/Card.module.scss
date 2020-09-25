@@ -1,0 +1,69 @@
+@import 'assets/styles/variables.scss';
+
+.root {
+    background-color: rgba(0, 0, 0, 0);
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.img {
+    width: 260px;
+    height: 360px;
+    background-color: #191B1C;
+    padding: 55px 22px;
+    position: relative;
+
+
+
+    img {
+        position: absolute;
+        max-width: 215px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.sm {
+    width: 260px;
+    height: 360px;
+}
+
+.body {
+    margin-top: 25px;
+    font-family: $text-playfair;
+}
+
+.title {
+    margin-bottom: 10px;
+}
+
+.text {
+    font-size: 1.6rem;
+    color: #D0D0D0;
+}
+
+@media screen and (max-width: 1400px) {
+
+    .sm {
+        width: 240px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+    .sm {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .sm {
+        width: 260px;
+    }
+}

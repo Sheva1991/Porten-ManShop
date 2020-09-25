@@ -1,0 +1,47 @@
+@import 'assets/styles/variables.scss';
+@import 'assets/styles/mixins.scss';
+
+.root {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 160px 10px;
+    background: url('../../../../assets/img/header.png') center no-repeat;
+    background-size: cover;
+}
+
+.logo {
+    padding: 93px 67px;
+    border: 4px solid $color-main;
+}
+
+.subtitle {
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    margin-top: 7px;
+}
+
+.text {
+    text-transform: uppercase;
+    max-width: 730px;
+    text-align: center;
+    font-size: 1.6rem;
+    margin-top: 80px;
+}
+
+@media screen and (max-width: 576px) {
+    .root {
+        padding: 50px 10px;
+    }
+}
+
+@media screen and (max-width: 325px) {
+    .logo {
+        padding: 40px 20px;
+    }
+
+    .text {
+        margin-top: 20px;
+    }
+}

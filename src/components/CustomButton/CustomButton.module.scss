@@ -1,0 +1,11 @@
+@import 'assets/styles/variables.scss';
+@import 'assets/styles/mixins.scss';
+
+.root {
+    cursor: pointer;
+    color: $color-main;
+
+    @include hfa {
+        outline: none;
+    }
+}
