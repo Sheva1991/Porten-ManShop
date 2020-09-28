@@ -2,7 +2,7 @@
 @import 'assets/styles/mixins.scss';
 
 .root {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0) !important;
     width: fit-content;
     margin: auto;
     margin-bottom: 40px;
@@ -10,6 +10,7 @@
     flex-direction: column;
     align-items: flex-start;
     cursor: pointer;
+    border-radius: 0 !important;
 
     @include hfa {
         box-shadow: 0 10px 20px rgba(255, 255, 255, 0.19), 0 6px 6px rgba(255, 255, 255, 0.23);
@@ -23,8 +24,6 @@
     background-color: #191B1C;
     padding: 55px 22px;
     position: relative;
-
-
 
     img {
         position: absolute;
@@ -48,6 +47,11 @@
 
 .title {
     margin-bottom: 10px;
+    color: $color-main;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-family: $text-playfair;
+    font-weight: 700;
 }
 
 .text {
