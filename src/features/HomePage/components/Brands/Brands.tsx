@@ -1,4 +1,4 @@
-import Title from 'components/Title'
+import HtmlComponent from 'components/HtmlComponent'
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import styles from './Brands.module.scss'
@@ -9,7 +9,7 @@ const Brands = () => {
     return (
         <section className={styles.root}>
             <Container className={styles.container}>
-                <Title tag='h2' title='наши бренды' />
+                <HtmlComponent component='h2' variant='h2' title='наши бренды' />
                 <Row className={styles.brands}>
                     <Col lg={3} md={6} className={styles.brand}>
                         <img src={brand} alt="brand" />

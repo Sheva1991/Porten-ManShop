@@ -4,5 +4,5 @@ export type PropsType = {
     title?: string,
     component?: React.FC,
     className?: string,
-    action?: (event: React.MouseEvent<HTMLElement>) => void,
+    onClick?: (event: React.MouseEvent<HTMLElement>) => void,
 }

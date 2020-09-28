@@ -1,5 +1,5 @@
-import CustomButton from 'components/CustomButton'
-import Title from 'components/Title'
+import CustomButton from 'components/Button'
+import HtmlComponent from 'components/HtmlComponent'
 import React from 'react'
 import classNames from 'classnames'
 import styles from './NewColaction.module.scss'
@@ -10,7 +10,7 @@ const NewColaction: React.FC<PropsType> = ({ title, btnTitle, className, text })
 
     return (
         <section className={classNames(styles.root, className)}>
-            { title && <Title tag='h2' title={title} />}
+            { title && <HtmlComponent component='h2' variant='h2' title={title} />}
             {text && <div className={styles.text}>{text}</div>}
             {btnTitle && <CustomButton className={styles.btn} title={btnTitle} />}
         </section>

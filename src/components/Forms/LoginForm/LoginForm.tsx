@@ -3,7 +3,7 @@ import { ErrorMessage, Field, Form, Formik } from 'formik';
 import * as Yup from "yup";
 import styles from './LoginForm.module.scss'
 import { FormValues } from './types';
-import Button from 'components/CustomButton';
+import Button from 'components/Button';
 import ErrorField from '../ErrorField';
 import Input from '../Input';
 

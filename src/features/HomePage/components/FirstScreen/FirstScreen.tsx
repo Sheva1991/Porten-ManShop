@@ -1,4 +1,4 @@
-import Title from 'components/Title'
+import HtmlComponent from 'components/HtmlComponent'
 import React from 'react'
 import styles from './FirstScreen.module.scss'
 
@@ -8,7 +8,7 @@ const FirstScreen: React.FC = () => {
     return (
         <section className={styles.root}>
             <div className={styles.logo}>
-                <Title tag='h1' title='PORTEN' />
+                <HtmlComponent component='h1' variant='h1' title='PORTEN' />
                 <p className={styles.subtitle}>санкт-петербург</p>
             </div>
             <p className={styles.text}>

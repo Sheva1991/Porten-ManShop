@@ -1,9 +1,9 @@
 import React from 'react'
 import { PropTypes } from './types';
 import classNames from 'classnames'
-import styles from './CustomList.module.scss'
+import styles from './List.module.scss'
 
-const CustomList: React.FC<PropTypes> = ({ items, className }) => {
+const List: React.FC<PropTypes> = ({ items, className }) => {
     return (
         <ul className={classNames(styles.root, className)}>
             {items.map((item, index: number) => (
@@ -13,4 +13,4 @@ const CustomList: React.FC<PropTypes> = ({ items, className }) => {
     )
 }
 
-export default CustomList
+export default List

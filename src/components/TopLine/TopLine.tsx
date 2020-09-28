@@ -1,4 +1,4 @@
-import CustomLink from 'components/CustomLink'
+import Link from 'components/Link'
 import React from 'react'
 import { Container } from 'react-bootstrap'
 import styles from './TopLine.module.scss'
@@ -17,10 +17,10 @@ const TopLine: React.FC = () => {
                 <span>Работаем 7 дней в неделю</span>
                 <span>9:00 — 18:00</span>
             </div>
-            <CustomLink link='/login' className={styles.login}>
+            <Link link='/login' className={styles.login}>
                 <LoginIcon />
                 <span>Войти / Регистрация</span>
-            </CustomLink>
+            </Link>
         </Container>
     )
 }

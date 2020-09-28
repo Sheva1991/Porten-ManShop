@@ -1,62 +1,41 @@
-import CustomCard from 'components/Card'
-import Title from 'components/Title'
+import Card from 'components/Card'
+import Title from 'components/HtmlComponent'
 import React, { useState, useEffect } from 'react'
 import { Col, Row } from 'react-bootstrap'
 import styles from './NewSeason.module.scss'
-import CustomSlider from 'components/CustomSlider/CustomSlider';
-import img from 'assets/img/clock.png'
-
-const items = [
-    { img: img, title: 'Louis XVI ATHOS', text: '165 000 руб.' },
-    { img: img, title: 'Louis XVI ATHOS', text: '165 000 руб.' },
-    { img: img, title: 'Louis XVI ATHOS', text: '165 000 руб.' },
-]
+import CustomSlider from 'components/Slider/Slider';
+import { items, settings } from './constants';
 
 const NewSeason: React.FC = () => {
-    const [viewSlider, setviewSlider] = useState(false)
-
-    const handleResize = () => {
-        let width = document.documentElement.clientWidth
-        if (width <= 576) {
-            setviewSlider(true)
-        } else {
-            setviewSlider(false)
-        }
-    }
+    const [viewSlider, setviewSlider] = useState({
+        matches: window.innerWidth > 576 ? false : true,
+    });
 
     useEffect(() => {
-        let width = window.innerWidth
-        if (width <= 576) {
-            setviewSlider(true)
-        } else {
-            setviewSlider(false)
-        }
-        window.addEventListener('resize', handleResize)
+        let mediaQuery = window.matchMedia("(max-width: 576px)");
+        mediaQuery.addListener(setviewSlider);
+
+        return () => mediaQuery.removeListener(setviewSlider);
 
     }, [])
 
-    useEffect(() => {
-        return () => {
-            window.removeEventListener('resize', handleResize)
-        };
-    }, []);
 
     return (
         <section className={styles.root}>
-            <Title tag='h2' title='СЕЗОН 2020/21' />
-            {!viewSlider ?
+            <Title component='h2' variant='h2' title='СЕЗОН 2020/21' />
+            {viewSlider && !viewSlider.matches ?
                 <Row className='justify-content-center'>
-                    {items.map((item, index: number) => (
+                    {items && items.map((item, index: number) => (
                         <Col md={4} sm={8} key={index}>
-                            <CustomCard small title={item.title} text={item.text} img={item.img} />
+                            <Card small title={item.title} text={item.text} img={item.img} />
                         </Col>
                     ))}
                 </Row>
                 :
-                <CustomSlider>
-                    {items.map((item, index: number) => (
+                <CustomSlider settings={settings}>
+                    {items && items.map((item, index: number) => (
                         <div className={styles.slide} key={index}>
-                            <CustomCard small title={item.title} text={item.text} img={item.img} />
+                            <Card small title={item.title} text={item.text} img={item.img} />
                         </div>
                     ))}
                 </CustomSlider>}

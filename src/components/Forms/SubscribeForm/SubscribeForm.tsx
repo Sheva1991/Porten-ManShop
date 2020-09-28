@@ -2,7 +2,7 @@ import React, { memo, useEffect, useMemo } from 'react'
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import * as Yup from "yup";
 import { FormValues } from './types';
-import CustomButton from 'components/CustomButton';
+import Button from 'components/Button';
 import ErrorField from '../ErrorField';
 import Input from '../Input';
 import styles from './SubscribeForm.module.scss'
@@ -66,7 +66,7 @@ const SubscribeForm: React.FC = memo(() => {
                             />
                             <ErrorMessage name='email' component={ErrorField} />
                         </div>
-                        <CustomButton type='submit' title='ПОДПИСАТЬСЯ' className={styles.btn} disabled={isSubmitting || !isValid} />
+                        <Button type='submit' title='ПОДПИСАТЬСЯ' className={styles.btn} disabled={isSubmitting || !isValid} />
                     </Form>
 
                 </div>
