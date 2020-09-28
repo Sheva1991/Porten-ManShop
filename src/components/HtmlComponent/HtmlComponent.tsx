@@ -3,10 +3,10 @@ import styles from './HtmlComponent.module.scss'
 import classNames from 'classnames'
 import { PropsType } from './types';
 
-const HtmlComponent: React.FC<PropsType> = ({ title, component, variant, className, children }) => {
-    const CustomTag = variant;
+const HtmlComponent: React.FC<PropsType> = ({ title, component: Component = 'div', variant, className, children }) => {
+
     return (
-        <CustomTag className={classNames(styles.root, className,
+        <Component className={classNames(styles.root, className,
             {
                 [styles.h1]: variant === 'h1',
                 [styles.h2]: variant === 'h2',
@@ -15,7 +15,7 @@ const HtmlComponent: React.FC<PropsType> = ({ title, component, variant, classNa
 
             })}>
             {title}{children}
-        </CustomTag>
+        </Component>
     )
 }
 
