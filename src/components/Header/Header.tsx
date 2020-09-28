@@ -3,8 +3,8 @@ import Menu from 'components/Menu'
 import React, { useCallback, useState } from 'react'
 import { Container } from 'react-bootstrap'
 import styles from './Header.module.scss'
-import { ReactComponent as CartIcon } from 'assets/img/cart.svg'
-import { ReactComponent as SearchIcon } from 'assets/img/search.svg'
+import { ReactComponent as CartIcon } from 'assets/icons/cart.svg'
+import { ReactComponent as SearchIcon } from 'assets/icons/search.svg'
 import { menu } from './constants';
 
 

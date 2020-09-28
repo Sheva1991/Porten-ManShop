@@ -6,7 +6,8 @@ import './Slider.scss'
 const CustomSlider: React.FC<PropsType> = ({ settings, children }) => {
     return (
         <>
-            <Slider {...settings} >
+            <Slider {...settings}
+            >
                 {children}
             </Slider>
         </>

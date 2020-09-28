@@ -2,8 +2,8 @@ import Link from 'components/Link'
 import React from 'react'
 import { Container } from 'react-bootstrap'
 import styles from './TopLine.module.scss'
-import { ReactComponent as PhoneIcon } from 'assets/img/phone.svg'
-import { ReactComponent as LoginIcon } from 'assets/img/login.svg'
+import { ReactComponent as PhoneIcon } from 'assets/icons/phone.svg'
+import { ReactComponent as LoginIcon } from 'assets/icons/login.svg'
 
 const TopLine: React.FC = () => {
 
