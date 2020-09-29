@@ -1,6 +1,15 @@
 export const menu = [{
     key: '/likes',
     value: 'понравилось'
+
+},
+{
+    key: '/users',
+    value: 'Пользователи'
+},
+{
+    key: '/posts',
+    value: 'Посты'
 },
 {
     key: '/cabinet',
@@ -10,4 +19,5 @@ export const menu = [{
     key: '/settings',
     value: 'настройки'
 },
+
 ]

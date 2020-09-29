@@ -7,10 +7,11 @@ import { PropsType } from './types';
 const Input: React.FC<PropsType & FieldProps> = ({
     className,
     placeholder,
-    field
+    field,
+    type
 }) => {
     return (
-        <input {...field} type='text' className={classNames(styles.root, className)} placeholder={placeholder} />
+        <input {...field} type={type} className={classNames(styles.root, className)} placeholder={placeholder} />
     )
 }
 

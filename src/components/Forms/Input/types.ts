@@ -1,4 +1,5 @@
 export interface PropsType {
     className?: string
-    placeholder?: string
+    placeholder?: string,
+    type: string
 }

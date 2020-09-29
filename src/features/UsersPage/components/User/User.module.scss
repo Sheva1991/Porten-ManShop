@@ -2,17 +2,29 @@
 @import 'assets/styles/mixins.scss';
 
 .root {
+    background: $color-gray !important;
+    max-width: 250px;
+}
+
+.linkContainer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.link {
     cursor: pointer;
     color: $color-main;
     text-transform: uppercase;
-    background: rgba(0, 0, 0, 0);
+    background: rgb(0, 0, 0);
     border: 1px solid rgba(0, 0, 0, 0);
     outline: none;
-    padding: 10px 20px;
+    border-radius: 5px;
+    padding: 5px 10px;
 
     @include hfa {
         outline: none;
         color: $color-gray;
         border: 1px solid $color-gray;
     }
+
 }

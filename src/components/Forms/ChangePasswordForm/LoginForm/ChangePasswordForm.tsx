@@ -1,19 +1,19 @@
 import React, { memo, useEffect, useMemo } from 'react'
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import * as Yup from "yup";
-import styles from './LoginForm.module.scss'
-import { FormValues } from './types';
+import styles from './ChangePasswordForm.module.scss'
+import { FormValues, PropsType } from './types';
 import Button from 'components/Button';
-import ErrorField from '../ErrorField';
-import Input from '../Input';
+import ErrorField from 'components/Forms/ErrorField';
+import Input from 'components/Forms/Input';
 
 
 
 
-const LoginForm: React.FC = memo(() => {
+const ChangePasswordForm: React.FC<PropsType> = memo(({ password }) => {
 
     const action = (values: FormValues) => {
-        console.log('login')
+        console.log('change Password')
     }
 
     const mountState = useMemo(
@@ -46,11 +46,13 @@ const LoginForm: React.FC = memo(() => {
     return <div>
         <Formik
             initialValues={{
-                email: '', password: ''
+                password: '', newPassword: ''
             }}
             validationSchema={Yup.object().shape({
-                email: Yup.string().email("Email not valid").required("Email is required"),
-                password: Yup.string().min(3).max(20).required("Password is required"),
+                password: Yup.string()
+                    .oneOf([`${password}`], 'Old password is required')
+                    .required('Password confirm is required'),
+                newPassword: Yup.string().min(3).max(20).required("Password is required")
             })}
             onSubmit={submit}
         >
@@ -59,18 +61,7 @@ const LoginForm: React.FC = memo(() => {
                     <Form className={styles.form}>
                         <div className={styles.field}>
                             <label>
-                                <div className={styles.label}>Email</div>
-                            </label>
-                            <Field
-                                name='email'
-                                component={Input}
-                                type='email'
-                            />
-                            <ErrorMessage name='email' component={ErrorField} />
-                        </div>
-                        <div className={styles.field}>
-                            <label>
-                                <div className={styles.label}>Password</div>
+                                <div className={styles.label}>Old Password</div>
                             </label>
                             <Field
                                 name='password'
@@ -79,8 +70,20 @@ const LoginForm: React.FC = memo(() => {
                             />
                             <ErrorMessage name='password' component={ErrorField} />
                         </div>
+                        <div className={styles.field}>
+                            <label>
+                                <div className={styles.label}>New password</div>
+                            </label>
+                            <Field
+                                name='newPassword'
+                                component={Input}
+                                type='newPassword'
+                                disabled
+                            />
+                            <ErrorMessage name='newPassword' component={ErrorField} />
+                        </div>
 
-                        <Button type='submit' title='Log in' className={styles.btn} disabled={isSubmitting || !isValid} />
+                        <Button type='submit' title='Change password' className={styles.btn} disabled={isSubmitting || !isValid} />
                     </Form>
 
                 </div>
@@ -89,5 +92,5 @@ const LoginForm: React.FC = memo(() => {
     </div>
 })
 
-export default LoginForm
+export default ChangePasswordForm
 
