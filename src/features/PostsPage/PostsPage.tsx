@@ -1,4 +1,5 @@
 import { Container } from '@material-ui/core'
+import AddPostForm from 'components/Forms/AddPostForm'
 import HtmlComponent from 'components/HtmlComponent'
 import React, { memo } from 'react'
 import Post from './Post/Post'
@@ -28,6 +29,7 @@ const PostsPage = memo(() => {
                 )
                 }
             </div>
+            <AddPostForm />
         </Container>
     )
 }
