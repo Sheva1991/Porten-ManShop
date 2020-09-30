@@ -1,11 +1,11 @@
 import Link from 'components/Link'
 import Menu from 'components/Menu'
 import React, { useCallback, useState } from 'react'
-import { Container } from 'react-bootstrap'
 import styles from './Header.module.scss'
 import { ReactComponent as CartIcon } from 'assets/icons/cart.svg'
 import { ReactComponent as SearchIcon } from 'assets/icons/search.svg'
 import { menu } from './constants';
+import { Container } from '@material-ui/core'
 
 
 

@@ -6,6 +6,7 @@ import LoginPage from 'features/LoginPage'
 import UsersPage from 'features/UsersPage'
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
+import PostsPage from '../features/PostsPage/PostsPage';
 
 export const Routes = () => {
     return (
@@ -15,6 +16,7 @@ export const Routes = () => {
             <Route path='/login/recoveryPassword' component={RecoveryForm} />
             <Route path='/cabinet' component={KabinetPage} />
             <Route path='/users' component={UsersPage} />
+            <Route path='/posts' component={PostsPage} />
         </Switch>
 
     )

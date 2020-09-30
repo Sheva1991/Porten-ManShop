@@ -1,6 +1,6 @@
+import { Container, Grid } from '@material-ui/core'
 import HtmlComponent from 'components/HtmlComponent'
 import React from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
 import styles from './Brands.module.scss'
 
 const brand = require('assets/img/brand.png')
@@ -10,20 +10,20 @@ const Brands = () => {
         <section className={styles.root}>
             <Container className={styles.container}>
                 <HtmlComponent component='h2' variant='h2' title='наши бренды' />
-                <Row className={styles.brands}>
-                    <Col lg={3} md={6} className={styles.brand}>
+                <Grid container className={styles.brands}>
+                    <Grid item lg={3} md={6} className={styles.brand}>
                         <img src={brand} alt="brand" />
-                    </Col>
-                    <Col lg={3} md={6} className={styles.brand}>
+                    </Grid>
+                    <Grid item lg={3} md={6} className={styles.brand}>
                         <img src={brand} alt="brand" />
-                    </Col>
-                    <Col lg={3} md={6} className={styles.brand}>
+                    </Grid>
+                    <Grid item lg={3} md={6} className={styles.brand}>
                         <img src={brand} alt="brand" />
-                    </Col>
-                    <Col lg={3} md={6} className={styles.brand}>
+                    </Grid>
+                    <Grid item lg={3} md={6} className={styles.brand}>
                         <img src={brand} alt="brand" />
-                    </Col>
-                </Row>
+                    </Grid>
+                </Grid>
             </Container>
         </section>
     )

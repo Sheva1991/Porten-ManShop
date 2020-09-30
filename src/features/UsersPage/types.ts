@@ -1,4 +1,4 @@
-import { Post } from '../PostsPage/PostList/types';
+import { Post } from '../PostsPage/types';
 
 
 export interface User {

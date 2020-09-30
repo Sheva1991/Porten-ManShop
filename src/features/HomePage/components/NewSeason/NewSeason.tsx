@@ -1,10 +1,10 @@
 import Card from 'components/Card'
 import Title from 'components/HtmlComponent'
 import React, { useState, useEffect } from 'react'
-import { Col, Row } from 'react-bootstrap'
 import styles from './NewSeason.module.scss'
 import CustomSlider from 'components/Slider/Slider';
 import { items, settings } from './constants';
+import { Grid } from '@material-ui/core'
 
 const NewSeason: React.FC = () => {
     const [viewSlider, setviewSlider] = useState({
@@ -24,13 +24,13 @@ const NewSeason: React.FC = () => {
         <section className={styles.root}>
             <Title component='h2' variant='h2' title='СЕЗОН 2020/21' />
             {viewSlider && !viewSlider.matches ?
-                <Row className='justify-content-center'>
+                <Grid container className='justify-content-center'>
                     {items && items.map((item, index: number) => (
-                        <Col md={4} sm={8} key={index}>
+                        <Grid item md={4} sm={8} key={index}>
                             <Card small title={item.title} text={item.text} img={item.img} />
-                        </Col>
+                        </Grid>
                     ))}
-                </Row>
+                </Grid>
                 :
                 <CustomSlider settings={settings}>
                     {items && items.map((item, index: number) => (
