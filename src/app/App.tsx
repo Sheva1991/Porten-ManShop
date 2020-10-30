@@ -2,7 +2,7 @@ import React from 'react';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
 import TopLine from 'components/TopLine';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import { Routes } from './routes';
 import LastLine from 'components/LastLine';
 import styles from './App.module.scss'
@@ -25,7 +25,8 @@ const theme = createMuiTheme({
 
 const App = () => {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    //hashrouter only for gh-pages
+    <HashRouter>
       <ThemeProvider theme={theme}>
         <div className={styles.root}>
           <TopLine />
@@ -37,7 +38,7 @@ const App = () => {
           <LastLine />
         </div >
       </ThemeProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
