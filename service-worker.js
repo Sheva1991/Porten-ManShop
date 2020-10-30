@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Porten-ManShop/precache-manifest.e86a76ae1eb96ed8e59f349fbf8279cc.js"
+  "/Porten-ManShop/precache-manifest.486b7368c7a616466dec31623a31a605.js"
 );
 
 self.addEventListener('message', (event) => {
