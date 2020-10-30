@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/manShop/static/css/main.27ace2bc.chunk.css",
+    "main.js": "/manShop/static/js/main.e30b8b09.chunk.js",
+    "main.js.map": "/manShop/static/js/main.e30b8b09.chunk.js.map",
+    "runtime-main.js": "/manShop/static/js/runtime-main.e95601c9.js",
+    "runtime-main.js.map": "/manShop/static/js/runtime-main.e95601c9.js.map",
+    "static/js/2.d28fad70.chunk.js": "/manShop/static/js/2.d28fad70.chunk.js",
+    "static/js/2.d28fad70.chunk.js.map": "/manShop/static/js/2.d28fad70.chunk.js.map",
+    "index.html": "/manShop/index.html",
+    "precache-manifest.142bb61d7c2c30913e870399777b67e3.js": "/manShop/precache-manifest.142bb61d7c2c30913e870399777b67e3.js",
+    "service-worker.js": "/manShop/service-worker.js",
+    "static/css/main.27ace2bc.chunk.css.map": "/manShop/static/css/main.27ace2bc.chunk.css.map",
+    "static/js/2.d28fad70.chunk.js.LICENSE.txt": "/manShop/static/js/2.d28fad70.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/manShop/static/media/PostNoBillsJaffnaBold.fd92c24b.woff2",
+    "static/media/cart.44889b67.svg": "/manShop/static/media/cart.44889b67.svg",
+    "static/media/clock.f7cd9362.png": "/manShop/static/media/clock.f7cd9362.png",
+    "static/media/Footer.module.scss": "/manShop/static/media/footer.e9b05e3b.png",
+    "static/media/FirstScreen.module.scss": "/manShop/static/media/header.3a7d5ade.png",
+    "static/media/login.57d8994f.svg": "/manShop/static/media/login.57d8994f.svg",
+    "static/media/NewColaction.module.scss": "/manShop/static/media/new.5e3f6dab.jpg",
+    "static/media/phone.5d8178f9.svg": "/manShop/static/media/phone.5d8178f9.svg",
+    "static/media/search.b11de417.svg": "/manShop/static/media/search.b11de417.svg",
+    "static/media/Slider.scss": "/manShop/static/media/slick.f97e3bbf.svg",
+    "static/media/HomePage.module.scss": "/manShop/static/media/smoking.06a00d0a.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e95601c9.js",
+    "static/js/2.d28fad70.chunk.js",
+    "static/css/main.27ace2bc.chunk.css",
+    "static/js/main.e30b8b09.chunk.js"
+  ]
+}
