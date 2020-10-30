@@ -43,14 +43,14 @@ const ChangePasswordForm: React.FC<PropsType> = memo(({ password }) => {
         [mountState]
     )
 
-    return <div>
+    return <>
         <Formik
             initialValues={{
                 password: '', newPassword: ''
             }}
             validationSchema={Yup.object().shape({
                 password: Yup.string()
-                    .oneOf([`${password}`], 'Old password is required')
+                    .oneOf([`${password}`], 'Old password is not correct')
                     .required('Password confirm is required'),
                 newPassword: Yup.string().min(3).max(20).required("Password is required")
             })}
@@ -89,7 +89,7 @@ const ChangePasswordForm: React.FC<PropsType> = memo(({ password }) => {
                 </div>
             )}
         </Formik>
-    </div>
+    </>
 })
 
 export default ChangePasswordForm

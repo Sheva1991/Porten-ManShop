@@ -4,14 +4,6 @@ export const menu = [{
 
 },
 {
-    key: '/users',
-    value: 'Пользователи'
-},
-{
-    key: '/posts',
-    value: 'Посты'
-},
-{
     key: '/cabinet',
     value: 'Личный кабинет'
 },
@@ -19,5 +11,4 @@ export const menu = [{
     key: '/settings',
     value: 'настройки'
 },
-
 ]
