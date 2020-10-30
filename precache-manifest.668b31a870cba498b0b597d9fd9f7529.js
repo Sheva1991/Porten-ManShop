@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3ecfc96f4d95847a5c31942a4da36312",
+    "revision": "23f1cc58f024a5a44db6d46b87abfa37",
     "url": "/manShop/index.html"
   },
   {
-    "revision": "ec513b4dc4c486dcccf0",
+    "revision": "102fb5c867a5aa5a05cf",
     "url": "/manShop/static/css/main.27ace2bc.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/manShop/static/js/2.d28fad70.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ec513b4dc4c486dcccf0",
-    "url": "/manShop/static/js/main.5072a367.chunk.js"
+    "revision": "102fb5c867a5aa5a05cf",
+    "url": "/manShop/static/js/main.a8b1af15.chunk.js"
   },
   {
     "revision": "f565e4544687078a1df2",
